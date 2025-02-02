@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentAnchorPane" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #d7ccc8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.studentcoursemaker.coursemaker.CoursemakerController">
+    <children>
+        <Label layoutX="241.0" layoutY="14.0" prefHeight="31.0" prefWidth="375.0" text="Welcome to your Course Manager">
+            <font>
+                <Font size="26.0" />
+            </font>
+            <textFill>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.6057233810424805" blue="0.75" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color green="0.6944769024848938" blue="0.7799999713897705" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Line endX="195.5" layoutX="381.0" layoutY="76.0" startX="-100.0" stroke="#1a7ca1" strokeWidth="2.0" />
+        <TextField fx:id="courseNameTextField" layoutX="64.0" layoutY="131.0" prefHeight="46.0" prefWidth="201.0" promptText="Click to enter course name" style="-fx-background-radius: 10;">
+            <font>
+                <Font size="15.0" />
+            </font></TextField>
+        <TextArea fx:id="courseTextArea" layoutX="14.0" layoutY="418.0" prefHeight="218.0" prefWidth="396.0" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font></TextArea>
+        <Button layoutX="690.0" layoutY="172.0" mnemonicParsing="false" onAction="#viewCourseInfoButtonOnClick" prefHeight="117.0" prefWidth="124.0" style="-fx-background-radius: 15; -fx-border-color: #01579b; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #cfd8dc;" text="Add to Text Area to View" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Tahoma Bold" size="16.0" />
+            </font></Button>
+        <RadioButton fx:id="coreRadioButton" layoutX="196.0" layoutY="349.0" mnemonicParsing="false" text="Core" />
+        <RadioButton fx:id="foundationRadioButton" layoutX="196.0" layoutY="315.0" mnemonicParsing="false" text="Foundation" />
+        <Label layoutX="58.0" layoutY="331.0" text="Select course type" textFill="#434343">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="courseStartDatePicker" layoutX="64.0" layoutY="259.0" prefHeight="32.0" prefWidth="200.0" promptText="Select Course Start Date" />
+        <CheckBox fx:id="isLabCheckBox" layoutX="311.0" layoutY="206.0" mnemonicParsing="false" prefWidth="85.0" text="Tick if Course has Lab" textAlignment="CENTER" wrapText="true" />
+        <Label layoutX="267.0" layoutY="45.0" prefHeight="31.0" prefWidth="328.0" text="Your All in One Course Scheduling Program" textFill="#797d8a">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="courseCodeComboBox" layoutX="311.0" layoutY="138.0" prefHeight="33.0" prefWidth="156.0" promptText="Select Course Code" visibleRowCount="7" />
+        <RadioButton fx:id="minorRadioButton" layoutX="292.0" layoutY="349.0" mnemonicParsing="false" text="Minor" />
+        <RadioButton fx:id="majorRadioButton" layoutX="292.0" layoutY="316.0" mnemonicParsing="false" text="Major" />
+        <ComboBox fx:id="courseTimeComboBox" layoutX="497.0" layoutY="138.0" prefHeight="33.0" prefWidth="156.0" promptText="Select Course Time" visibleRowCount="7" />
+        <ComboBox fx:id="labCodeComboBox" layoutX="407.0" layoutY="197.0" prefHeight="33.0" prefWidth="156.0" promptText="Select Lab Code" visibleRowCount="7" />
+        <TextField fx:id="sectionNumTextField" layoutX="64.0" layoutY="191.0" prefHeight="46.0" prefWidth="156.0" promptText="Enter Section Number" style="-fx-background-radius: 10;">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <ComboBox fx:id="labTimeComboBox" layoutX="409.0" layoutY="243.0" prefHeight="33.0" prefWidth="156.0" promptText="Select Lab Timing" visibleRowCount="7" />
+        <TextArea fx:id="labTextArea" layoutX="441.0" layoutY="418.0" prefHeight="218.0" prefWidth="396.0" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+        <TextField fx:id="facultyNameTextField" layoutX="385.0" layoutY="318.0" prefHeight="46.0" prefWidth="201.0" promptText="Click to enter faculty name" style="-fx-background-radius: 10;">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <Line endX="-100.0" endY="206.5" layoutX="525.0" layoutY="424.0" startX="-100.0" strokeWidth="2.0" />
+        <Label fx:id="courseNvalueLabel" layoutX="14.0" layoutY="395.0" text="n Number of Course(s) Added" />
+        <Label fx:id="LabNvalueLabel" layoutX="441.0" layoutY="395.0" text="n Number of Lab(s) Added" />
+        <TextField fx:id="capacityTextField" layoutX="601.0" layoutY="318.0" prefHeight="46.0" prefWidth="201.0" promptText="Click to enter capacity" style="-fx-background-radius: 10;">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+    </children>
+</AnchorPane>
